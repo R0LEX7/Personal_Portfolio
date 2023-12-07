@@ -1,0 +1,124 @@
+@import "../../app.scss";
+
+.portfolio {
+  position: relative;
+
+  .progress {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    text-align: center;
+    color: orange;
+    font-size: 36px;
+
+    h1 {
+      font-size: 72px;
+      line-height: 88px;
+      color: orange;
+      @include mobile {
+        // margin-bottom: 30px;
+        font-size: 1.875rem /* 30px */;
+        line-height: 2.25rem /* 36px */;
+      }
+    }
+
+    .progressBar {
+      height: 10px;
+      background-color: white;
+      @include mobile {
+        // margin-bottom: 40px;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .wrapper {
+      max-width: 1366px;
+      height: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+
+      @include mobile {
+        padding: 10px 20px;
+        flex-direction: column;
+        height: calc(100% - 200px);
+        gap: 0;
+        margin-top: 170px;
+      }
+    }
+
+    .imageContainer {
+      flex: 1;
+      height: 50%;
+
+      @include mobile {
+        border-radius: 10px;
+        width: 100%;
+        max-height: 300px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @include mobile {
+          object-fit: contain;
+        }
+      }
+    }
+
+    .textContainer {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      @include mobile {
+        gap: 10px;
+        transform: none !important;
+        padding: 10px;
+        align-items: center;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 72px;
+
+        @include mobile {
+          font-size: 36px;
+        }
+      }
+
+      p {
+        color: gray;
+        font-size: 20px;
+
+        @include mobile {
+          font-size: 16px;
+        }
+      }
+
+      button {
+        background-color: orange;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        color: #0c0c1d;
+        width: 200px;
+        cursor: pointer;
+      }
+    }
+  }
+}
