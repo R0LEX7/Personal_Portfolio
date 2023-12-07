@@ -12,7 +12,7 @@ const projectsItems = [
     title: "Newsmonkey",
     img: "/projects/news.png",
     stack: ["React"],
-    desc: "NewsMonkey is a React-powered news application designed for real-time news consumption. By seamlessly integrating with the NewsAPI, it provides users with up-to-date news articles from diverse sources.",
+    desc: "NewsMonkey is a React-powered news application designed for real-time news consumption.It provides users with up-to-date news articles from diverse sources.",
     link: "https://github.com/R0LEX7/NewsMonkey",
   },
   {
@@ -21,7 +21,7 @@ const projectsItems = [
     img: "/projects/zestybites.png",
     stack: ["React", "Firebase"],
 
-    desc: "Innovatively crafted 'Zesty Bites,' a secure food delivery app using React, Firebase, Parcel, and Material UI. Enabled user-friendly restaurant exploration, dish customization, and Google Pay transactions.",
+    desc: "Innovatively crafted 'Zesty Bites,' a secure food delivery app using React, Firebase, Parcel,Material UI and Google Pay transactions.",
     link: "https://zestybites.vercel.app/",
   },
   {
@@ -29,7 +29,7 @@ const projectsItems = [
     title: "Medium Blog",
     img: "/projects/blog.png",
     stack: ["React", "Appwrite"],
-    desc: "This is a comprehensive project designed to cater to the unique needs and interests of software engineers and developers. This web-based platform is envisioned as a hub for sharing knowledge, experiences, and insights within the software engineering community.",
+    desc: "This web-based platform is envisioned as a hub for sharing knowledge, experiences, and insights within the software engineering community.",
     link: "https://medium-dev.vercel.app/",
   },
 ];
