@@ -18,7 +18,7 @@ const variants = {
       delay: 0.5,
       type: "spring",
       stiffness: 400,
-      damping: 50,
+      damping: 30,
     },
   },
 };

@@ -12,16 +12,16 @@
     color: orange;
     font-size: 36px;
 
-    h1 {
-      font-size: 72px;
-      line-height: 88px;
-      color: orange;
-      @include mobile {
-        // margin-bottom: 30px;
-        font-size: 1.875rem /* 30px */;
-        line-height: 2.25rem /* 36px */;
-      }
-    }
+    // h1 {
+    //   font-size: 72px;
+    //   line-height: 88px;
+    //   color: orange;
+    //   @include mobile {
+    //     // margin-bottom: 30px;
+    //     font-size: 1.875rem /* 30px */;
+    //     line-height: 2.25rem /* 36px */;
+    //   }
+    // }
 
     .progressBar {
       height: 10px;
@@ -61,9 +61,11 @@
     .imageContainer {
       flex: 1;
       height: 50%;
-
+      margin-top: 160px;
       @include mobile {
         border-radius: 10px;
+        margin-top: 0px;
+
         width: 100%;
         max-height: 300px;
       }
@@ -83,21 +85,21 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: 10px;
 
       @include mobile {
         gap: 10px;
         transform: none !important;
-        padding: 10px;
+        padding: 10px 0px;
         align-items: center;
         text-align: center;
       }
 
       h2 {
-        font-size: 72px;
+        font-size: 60px;
 
         @include mobile {
-          font-size: 36px;
+          font-size: 30px;
         }
       }
 
@@ -118,6 +120,15 @@
         color: #0c0c1d;
         width: 200px;
         cursor: pointer;
+      }
+
+      .stack{
+        display:flex;
+        gap: 5px;
+        width: 100%;
+        justify-content: center;
+        color:orange;
+        align-items: center;
       }
     }
   }

@@ -1,65 +1,69 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import "./contact.scss";
 import { motion, useInView } from "framer-motion";
-// import emailjs from "@emailjs/browser";
-
-const variants = {
-  initial: {
-    y: 500,
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      staggerChildren: 0.1,
-    },
-  },
-};
+import emailjs from "@emailjs/browser";
+import { contactVariants } from "../variants";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { CgMail } from "react-icons/cg";
 
 const Contact = () => {
   const ref = useRef();
   const formRef = useRef();
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
 
   const isInView = useInView(ref, { margin: "-100px" });
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    // emailjs
-    //   .sendForm(
-    //     "service_94y20xo",
-    //     "template_v10u2oh",
-    //     formRef.current,
-    //     "pX_2hasGmGcuvjXIW"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       setSuccess(true)
-    //     },
-    //     (error) => {
-    //       setError(true);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        String(import.meta.env.VITE_SERVICE_ID),
+        "template_uzdtw55",
+        formRef.current,
+        String(import.meta.env.VITE_PUBLIC_KEY)
+      )
+      .then(
+        (result) => {
+          toast("Message sent successfully");
+        },
+        (error) => {
+          toast("Error sending message");
+        }
+      );
   };
 
   return (
     <motion.div
       ref={ref}
       className="contact"
-      variants={variants}
+      variants={contactVariants}
       initial="initial"
       whileInView="animate"
     >
-      <motion.div className="textContainer" variants={variants}>
-        <motion.h1 variants={variants}>
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        theme="colored"
+      />
+      <motion.div className="textContainer" variants={contactVariants}>
+        <motion.h1
+          variants={contactVariants}
+          className=" z-10 text-3xl lg:text-[72px] lg:leading-[88px] lg:mb-10 text-center text-orange-400 font-bold mt-[3rem]"
+        >
           What's holding you back? Send me a message!
         </motion.h1>
-        <motion.div className="item " variants={variants}>
-          <h2 className="text-2xl">Mail</h2>
+        <motion.div
+          className="item flex gap-2 items-center justify-start "
+          variants={contactVariants}
+        >
+          <h2>
+            <CgMail />
+          </h2>
           <span>himanshugola1111@gmail.com</span>
         </motion.div>
       </motion.div>
@@ -70,7 +74,7 @@ const Contact = () => {
           whileInView={{ opacity: 0 }}
           transition={{ delay: 3, duration: 1 }}
         >
-          <svg   className="w-full h-full" viewBox="0 0 32.666 32.666">
+          <svg className="w-full h-full" viewBox="0 0 32.666 32.666">
             <motion.path
               strokeWidth={0.2}
               fill="none"
@@ -104,8 +108,6 @@ const Contact = () => {
           <input type="email" required placeholder="Email" name="email" />
           <textarea rows={8} placeholder="Message" name="message" />
           <button>Submit</button>
-          {error && "Error"}
-          {success && "Success"}
         </motion.form>
       </div>
     </motion.div>

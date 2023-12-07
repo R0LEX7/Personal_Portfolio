@@ -6,8 +6,9 @@ import { TbSchoolBell } from "react-icons/tb";
 import { MdDeveloperMode } from "react-icons/md";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
+import { eduVariants } from "../variants";
 import EduItem from "./EduItem";
+import SlidingAnimation from "../Sub/SlidingAnimation";
 
 const descStr =
   "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, cupiditate error. Explicabo est ut voluptatem.";
@@ -47,51 +48,22 @@ const eduItem = [
   },
 ];
 
-// ... (import statements)
-
-const slidingVariant = {
-  initial: {
-    x: '0%',
-  },
-  animate: {
-    x: '-100%',
-    transition: {
-      repeat: Infinity,
-      repeatType: 'mirror',
-      duration: 30,
-      ease: 'linear', // Set the easing function to linear for smooth sliding
-    },
-  },
-};
 
 const Education = () => {
-  const variants = {
-    initial: {
-      x: -500,
-      opacity: 0,
-    },
-    animate: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 1,
-        staggerChildren: 0.1,
-      },
-    },
-  };
+  
 
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
 
   return (
-    <div className="h-5/6 px-4 py-10 relative">
+    <motion.div className="h-5/6 px-4 py-10 relative">
       <motion.h1
         ref={ref}
         animate={inView ? 'animate' : 'initial'}
-        variants={variants}
-        className="text-center text-3xl font-medium lg:font-bold  md:font-bold lg:mb-8 md:mb-6 mt-[3rem]"
-      >
+        variants={eduVariants}
+        className=" z-10 text-3xl lg:text-[72px] lg:leading-[88px] lg:mb-10 text-center text-orange-400 font-bold mt-[3rem]"
+        >
         Education & Work
       </motion.h1>
       <VerticalTimeline>
@@ -99,15 +71,8 @@ const Education = () => {
           <EduItem item={item} key={item.title} />
         ))}
       </VerticalTimeline>
-      <motion.div
-        variants={slidingVariant}
-        initial="initial"
-        animate="animate"
-        className="absolute w-full font-bold text-[50vh]  bottom-[-120px] left-0 whitespace-nowrap text-[#ffffff09] capitalize"
-      >
-        My Journey
-      </motion.div>
-    </div>
+<SlidingAnimation title={"My Journey"}/>
+    </motion.div>
   );
 };
 

@@ -12,7 +12,7 @@
     gap: 0px;
     margin: 0;
     width: 100%;
-    padding:10px  20px;
+    padding: 10px 20px;
     flex-direction: column;
   }
 
@@ -30,21 +30,28 @@
       margin-top: 10px;
     }
 
-    h1 {
-      font-size: 72px;
-      line-height: 88px;
-      color: orange;
-      @include mobile {
-        font-size: 1.875rem /* 30px */;
-        line-height: 2.25rem /* 36px */;
-      }
-    }
+    // h1 {
+    //   font-size: 72px;
+    //   line-height: 88px;
+    //   color: orange;
+    //   @include mobile {
+    //     font-size: 1.875rem /* 30px */;
+    //     line-height: 2.25rem /* 36px */;
+    //   }
+    // }
 
     span,
     h2 {
       font-weight: 300;
       font-size: 36px;
       opacity: 0.8;
+      svg {
+        font-weight: 300;
+        font-size: 36px;
+        @include mobile {
+          font-size: 1.28rem;
+        }
+      }
       @include mobile {
         font-size: 12px;
       }
@@ -68,7 +75,6 @@
       @include mobile {
         font-size: 20px;
         padding: 12px;
-        
       }
     }
 

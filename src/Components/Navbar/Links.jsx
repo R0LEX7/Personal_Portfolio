@@ -1,53 +1,27 @@
 import { motion } from "framer-motion";
-
-const items = [
-  { name: "Home", path: "home" },
-  { name: "Skills", path: "skills" },
-  { name: "Education", path: "education" },
-  { name: "Projects", path: "projects" },
-  { name: "Contact", path: "contact" },
-  { name: "about", path: "about" },
-];
-
-const variants = {
-  open: {
-    transition: {
-      delay: 0.5,
-      staggerChildren: 0.1,
-      staggerDirection: 1
-    },
-  },
-  closed: {
-    transition: {
-      delay: 0.5,
-      staggerChildren: 0.05,
-      staggerDirection: -1,
-    },
-  },
+import { saveAs } from "file-saver";
+import { navItems } from "../../constant";
+import { linkItemVariants , linkVariants } from "../variants";
+const downloadResume = () => {
+  const resumePath = "/resume/Himanshu_Kumar_Gola.pdf";
+  saveAs(resumePath, "Himanshu_Kumar_Gola.pdf");
 };
-const itemVariants = {
-  open: {
-    y: 0,
-    opacity: 1,
-  },
-  closed: {
-    y: 50,
-    opacity: 0,
-  },
-};
+
+
+
 
 const Links = ({ setOpen }) => {
   return (
     <motion.div
       className="absolute w-full h-full flex flex-col items-center justify-center gap-5"
-      variants={variants}
+      variants={linkVariants}
     >
-      {items.map((item) => (
+      {navItems.map((item) => (
         <motion.a
           className="text-[40px] text-black"
           href={`#${item.path}`}
           key={item.name}
-          variants={itemVariants}
+          variants={linkItemVariants}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setOpen((prev) => !prev)}
@@ -55,6 +29,15 @@ const Links = ({ setOpen }) => {
           {item.name}
         </motion.a>
       ))}
+      <motion.button
+        variants={linkItemVariants}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        className="text-[40px] text-black"
+        onClick={downloadResume}
+      >
+        Resume
+      </motion.button>
     </motion.div>
   );
 };
