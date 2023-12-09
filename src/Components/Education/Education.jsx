@@ -10,25 +10,23 @@ import { eduVariants } from "../variants";
 import EduItem from "./EduItem";
 import SlidingAnimation from "../Sub/SlidingAnimation";
 
-const descStr =
-  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, cupiditate error. Explicabo est ut voluptatem.";
 
 const eduItem = [
   {
     title: "High Schooling",
     grade: "90.8%",
-    org: "CBSE",
+    org: "Central Board of Secondary Education",
     time: "2018",
     icon: <TbSchoolBell />,
-    desc: descStr,
+    desc: "Done High School board from New st. Stephen Public School (Agra).",
   },
   {
     title: "Intermediate Schooling",
     grade: "91.4%",
-    org: "CBSE",
+    org: "Central Board of Secondary Education",
     time: "2020",
     icon: <LiaSchoolSolid />,
-    desc: descStr,
+    desc: "Pursued from Saraswati Vidya Mandir (Agra). ",
   },
   {
     title: "Bachelor of Technology (CSE)",
@@ -36,7 +34,7 @@ const eduItem = [
     org: "AKTU",
     time: "2020 - present",
     icon: <TbSchool />,
-    desc: descStr,
+    desc: "Learning software development fundamentals along with software engineering, Team management and personality development and communication skills.",
   },
   {
     title: "Web Development Intern",
@@ -44,7 +42,7 @@ const eduItem = [
     org: "CodeClause",
     time: "2023",
     icon: <MdDeveloperMode />,
-    desc: descStr,
+    desc: "Worked on the Web application to improve the UI along with improving code quality and reusability in the application.",
   },
 ];
 

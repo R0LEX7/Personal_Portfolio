@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import SocialLinks from "./SocialLinks";
-import { textVariant ,picVariant } from "../variants";
+import { textVariant, picVariant } from "../variants";
 import SlidingAnimation from "../Sub/SlidingAnimation";
 
 const Hero = () => {
@@ -29,9 +29,10 @@ const Hero = () => {
             variants={textVariant}
             className=" lg:w-[600px] lg:text-xl text-sm whitespace-normal opacity-80"
           >
-            Hi there! My name is Himanshu Kumar Gola, a final-year student with
-            a passion for coding and technology.I'm eager to embark on my
-            software engineering journey.
+            Hi, I’m Himanshu, and I am passionate about creating intuitive,
+            user-friendly web applications that provide a seamless experience
+            for users. I am always eager to learn new technologies and stay
+            up-to-date with industry trends.
           </motion.p>
           <SocialLinks />
           <motion.div
@@ -49,16 +50,17 @@ const Hero = () => {
         </motion.div>
       </div>
       <SlidingAnimation title={"MERN Developer & Software Engineer"} />
-      <motion.div variants={picVariant}
-      initial= "initial"
-      animate = "animate"
-      className="lg:h-full absolute top-[-40px] flex-col justify-center right-0 lg:right-8 flex items-center w-full lg:w-auto">
+      <motion.div
+        variants={picVariant}
+        initial="initial"
+        animate="animate"
+        className="lg:h-full absolute top-[-40px] flex-col justify-center right-0 lg:right-8 flex items-center w-full lg:w-auto"
+      >
         <motion.img
           className="w-[300px] md:w-[400px] lg:w-[450px] rounded-full p-10 cursor-pointer"
           src="/pic.jpg"
           alt="Himanshu"
           variants={picVariant}
-
         />
       </motion.div>
     </div>
