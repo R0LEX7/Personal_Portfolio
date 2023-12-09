@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import SocialLinks from "./SocialLinks";
-import { textVariant } from "../variants";
+import { textVariant ,picVariant } from "../variants";
 import SlidingAnimation from "../Sub/SlidingAnimation";
 
 const Hero = () => {
@@ -49,13 +49,18 @@ const Hero = () => {
         </motion.div>
       </div>
       <SlidingAnimation title={"MERN Developer & Software Engineer"} />
-      <div className="lg:h-full absolute top-[-40px] flex-col justify-center right-0 lg:right-8 flex items-center w-full lg:w-auto">
-        <img
+      <motion.div variants={picVariant}
+      initial= "initial"
+      animate = "animate"
+      className="lg:h-full absolute top-[-40px] flex-col justify-center right-0 lg:right-8 flex items-center w-full lg:w-auto">
+        <motion.img
           className="w-[300px] md:w-[400px] lg:w-[450px] rounded-full p-10 cursor-pointer"
           src="/pic.jpg"
           alt="Himanshu"
+          variants={picVariant}
+
         />
-      </div>
+      </motion.div>
     </div>
   );
 };

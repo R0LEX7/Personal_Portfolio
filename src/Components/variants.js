@@ -12,7 +12,7 @@ const textVariant = {
     },
   },
   scrollBtn: {
-    opacity: 0,
+    opacity: 0.3,
     y: 10,
     transition: {
       duration: 2,
@@ -20,6 +20,23 @@ const textVariant = {
     },
   },
 };
+
+const picVariant = {
+  initial: {
+    x: 500,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type : "tween",
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+}
+
 
 const slidingVariant = {
   initial: {
@@ -98,4 +115,5 @@ export {
   contactVariants,
   linkItemVariants,
   linkVariants,
+  picVariant
 };
