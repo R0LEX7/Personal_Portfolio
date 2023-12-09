@@ -24,10 +24,11 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          toast("Message sent successfully");
+          toast.success("Message sent successfully");
+          formRef.current.reset();
         },
         (error) => {
-          toast("Error sending message");
+          toast.error("Error sending message");
         }
       );
   };

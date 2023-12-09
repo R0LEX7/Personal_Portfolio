@@ -8,7 +8,7 @@ const Hero = () => {
     <div className="hero mt-24">
       <div className="max-w-[1366px] h-full m-auto">
         <motion.div
-          className="h-full  z-10flex-wrap md:items-center lg:items-start  mt-[100px] lg:mt-0 flex flex-col  justify-center gap-[16px] lg:gap-[40px] p-4 lg:text-container md:text-container"
+          className="h-full  z-10 flex-wrap md:items-center lg:items-start  mt-[100px] lg:mt-0 flex flex-col  justify-center gap-[16px] lg:gap-[40px] p-4 lg:text-container md:text-container"
           variants={textVariant}
           initial="initial"
           animate="animate"
