@@ -64,7 +64,7 @@ const Education = () => {
         variants={eduVariants}
         className=" z-10 text-3xl lg:text-[72px] lg:leading-[88px] lg:mb-10 text-center text-orange-400 font-bold mt-[3rem]"
         >
-        Education & Work
+        Qualifications
       </motion.h1>
       <VerticalTimeline>
         {eduItem.map((item) => (
