@@ -1,5 +1,8 @@
 import React, { useRef } from "react";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring} from "framer-motion";
+
+
+
 import SlidingAnimation from "../Sub/SlidingAnimation";
 
 const items = [
