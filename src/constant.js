@@ -42,7 +42,7 @@ const projectsItems = [
     video : "https://youtu.be/_jNyTU7Vilw",
     stack: ["ReactJs", "NextUI", "Nodejs" , "MongoDB" , "ExpressJs" ],
     desc: "PINFINITY is a feature-rich social media platform built with the MERN stack, offering secure authentication via JWT and Bcrypt.js**. Users can create posts with image uploads using **Multer** and Cloudinary, and engage in real-time with like and comment features. It also supports seamless user logout for a smooth experience.",
-    link: "https://medium-dev.vercel.app/",
+    link: "https://pinfinity.vercel.app/",
   },
 ];
 

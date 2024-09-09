@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./portfolio.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import SlidingAnimation from "../Sub/SlidingAnimation";
@@ -14,6 +14,19 @@ const Single = ({ item }) => {
     target: ref,
   });
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
   return (
@@ -21,9 +34,12 @@ const Single = ({ item }) => {
       <div className="container">
         <div className="wrapper">
           <div className="imageContainer" ref={ref}>
-            {/* <img src={item.img} alt="" /> */}
-            {/* // Lazy load the YouTube player */}
-            <ReactPlayer url={item.video} controls={true} width={"100%"}  height={320} style={{borderRadius: "20px"}} />
+            <ReactPlayer
+              url={item.video}
+              width={"100%"}
+              height={!isMobile ? 360 : 260}
+              style={{ borderRadius: "20px" }}
+            />
           </div>
           <motion.div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
@@ -63,7 +79,7 @@ const Portfolio = () => {
     <div className="portfolio" ref={ref}>
       <div className="progress">
         <h1 className=" z-10 text-3xl lg:text-[72px] lg:leading-[88px] lg:mb-10 text-center text-orange-400 font-bold mt-[3rem]">
-          Successful  {"{"+item.length+"}"} Projects I'm Proud Of
+          Successful {"{" + item.length + "}"} Projects I'm Proud Of
         </h1>
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
