@@ -64,6 +64,8 @@
       width: 100%;
       align-items: center;
       margin-top: 160px;
+      border-radius: 20px;
+      padding-inline: 4px;
       @include mobile {
         border-radius: 10px;
         margin-top: 40px;

@@ -23,7 +23,7 @@ const Single = ({ item }) => {
           <div className="imageContainer" ref={ref}>
             {/* <img src={item.img} alt="" /> */}
             {/* // Lazy load the YouTube player */}
-            <ReactPlayer url={item.video} controls={true} width={"100%"}  height={320} />
+            <ReactPlayer url={item.video} controls={true} width={"100%"}  height={320} style={{borderRadius: "20px"}} />
           </div>
           <motion.div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
@@ -63,7 +63,7 @@ const Portfolio = () => {
     <div className="portfolio" ref={ref}>
       <div className="progress">
         <h1 className=" z-10 text-3xl lg:text-[72px] lg:leading-[88px] lg:mb-10 text-center text-orange-400 font-bold mt-[3rem]">
-          Successful Projects I'm Proud Of
+          Successful  {"{"+item.length+"}"} Projects I'm Proud Of
         </h1>
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
