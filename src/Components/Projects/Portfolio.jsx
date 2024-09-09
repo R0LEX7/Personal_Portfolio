@@ -37,7 +37,7 @@ const Single = ({ item }) => {
             <ReactPlayer
               url={item.video}
               width={"100%"}
-              height={!isMobile ? 360 : 260}
+              height={isMobile ? "auto" : 360}
               style={{ borderRadius: "20px" }}
             />
           </div>
