@@ -31,7 +31,7 @@ const projectsItems = [
     title: "Medium Blog",
     img: "/projects/blog.png",
     stack: ["React", "Appwrite"],
-    video: "https://youtu.be/1cYqHtFfZ_8",
+    video: "https://youtu.be/FYNFzfD57ZI",
     desc: "This web-based platform is envisioned as a hub for sharing knowledge, experiences, and insights within the software engineering community.",
     link: "https://medium-dev.vercel.app/",
   },

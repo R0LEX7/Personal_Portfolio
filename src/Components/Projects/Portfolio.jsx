@@ -3,7 +3,7 @@ import "./portfolio.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import SlidingAnimation from "../Sub/SlidingAnimation";
 import { projectsItems } from "../../constant";
-import ReactPlayer from "react-player/lazy";
+import ReactPlayer from "react-player/youtube";
 
 const item = projectsItems.reverse();
 
@@ -37,6 +37,9 @@ const Single = ({ item }) => {
             <ReactPlayer
               url={item.video}
               width={"100%"}
+              playing={true}
+              controls={true}
+              loop={true}
               height={isMobile ? "auto" : 360}
               style={{ borderRadius: "20px" }}
             />
