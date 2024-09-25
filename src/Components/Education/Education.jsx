@@ -32,15 +32,15 @@ const eduItem = [
     title: "Bachelor of Technology (CSE)",
     grade: null,
     org: "AKTU",
-    time: "2020 - present",
+    time: "2020 - 2024",
     icon: <TbSchool />,
     desc: "Learning software development fundamentals along with software engineering, Team management and personality development and communication skills.",
   },
   {
-    title: "Web Development Intern",
+    title: "Software Engineer Trainee",
     grade: null,
-    org: "CodeClause",
-    time: "2023",
+    org: "ERP Daddy",
+    time: "02|2024 - 08|2024",
     icon: <MdDeveloperMode />,
     desc: "Worked on the Web application to improve the UI along with improving code quality and reusability in the application.",
   },
@@ -48,7 +48,7 @@ const eduItem = [
 
 
 const Education = () => {
-  
+
 
   const { ref, inView } = useInView({
     triggerOnce: true,

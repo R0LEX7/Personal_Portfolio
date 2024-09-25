@@ -82,7 +82,7 @@ const Portfolio = () => {
     <div className="portfolio" ref={ref}>
       <div className="progress">
         <h1 className=" z-10 text-3xl lg:text-[72px] lg:leading-[88px] lg:mb-10 text-center text-orange-400 font-bold mt-[3rem]">
-          Successful {"{" + item.length + "}"} Projects I'm Proud Of
+          Successful {"{" + (item.length - 2) + "+}"} Projects I'm Proud Of
         </h1>
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
