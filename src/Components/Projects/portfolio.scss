@@ -53,16 +53,16 @@
         padding: 10px 20px;
         flex-direction: column;
         justify-content: start;
-        height: calc(100% - 200px);
-        gap: 0;
+        height: calc(100% - 336px);
+        gap: 10px;
         margin-top: 170px;
       }
       @include tablet {
         padding: 10px 20px;
         flex-direction: column;
         justify-content: start;
-        height: calc(100% - 200px);
-        gap: 0;
+        height: calc(100% - 336px);
+        gap: 10px;
         margin-top: 170px;
       }
     }
@@ -75,14 +75,17 @@
       margin-top: 160px;
       border-radius: 20px;
       padding-inline: 4px;
+
       @include mobile {
+        display: block;  // Set display to block to remove flex behavior
+        height: auto;    // Remove the fixed height
         border-radius: 10px;
         margin-top: 40px;
-
         width: 100%;
-
+        flex: none;      // Disable flex property on mobile
       }
     }
+
 
     .textContainer {
       margin-top: 10px;
@@ -94,9 +97,10 @@
 
       @include mobile {
         transform: none !important;
+        margin-top: 20px;
         padding: 10px 0px;
         align-items: center;
-        text-align: center;
+        text-align: justify;
       }
 
       h2 {
