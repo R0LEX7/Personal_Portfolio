@@ -49,7 +49,7 @@ const projectsItems = [
     title: "Real Time Code Editor",
     img: "/projects/blog.png",
     video : "https://youtu.be/sjR5mfV7WcU",
-    stack: [ "Next js", "Socket.io" , "Shadcn ui", "Node js" , "ExpressJs" ],
+    stack: [ "NextJs", "Socket.io" , "ShadcnUI", "NodeJs" , "ExpressJs" ],
     desc: "🔴 A Real-Time Collaborative Code Editor | Next.js,  Zustand, Socket.io, Node.js, ShadCN🚀\n 💻 This powerful editor allows multiple users to code together seamlessly in real time.",
     link: "https://www.linkedin.com/posts/himanshu-kumar-gola_nextjs-socketio-nodejs-activity-7244314940021342209-NETe?utm_source=share&utm_medium=member_desktop",
   },
