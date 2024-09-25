@@ -57,8 +57,9 @@ const Hero = () => {
         className="lg:h-full absolute top-[-40px] flex-col justify-center right-0 lg:right-8 flex items-center w-full lg:w-auto"
       >
         <motion.img
-          className="w-[300px] md:w-[400px] lg:w-[450px] rounded-full p-10 cursor-pointer"
-          src="/pic.jpg"
+          className="w-[300px] md:w-[400px] lg:w-[450px] h-[300px] md:h-[400px] lg:h-[450px] rounded-full p-10 cursor-pointer"
+          src="/IMG20240727143014.jpg"
+          style={{objectFit : "cover"}}
           alt="Himanshu"
           variants={picVariant}
         />
