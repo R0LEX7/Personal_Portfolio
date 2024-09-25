@@ -3,7 +3,7 @@ import { saveAs } from "file-saver";
 import { navItems } from "../../constant";
 import { linkItemVariants , linkVariants } from "../variants";
 const downloadResume = () => {
-  const resumePath = "/resume/Himanshu_Kumar_Gola.pdf";
+  const resumePath = "/resume/resume.pdf";
   saveAs(resumePath, "Himanshu_Kumar_Gola.pdf");
 };
 
