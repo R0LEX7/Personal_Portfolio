@@ -40,6 +40,8 @@ const Single = ({ item }) => {
               playing={true}
               controls={true}
               loop={true}
+              light = {true}
+
               height={isMobile ? "auto" : 400}
               style={{ borderRadius: "20px" }}
             />
