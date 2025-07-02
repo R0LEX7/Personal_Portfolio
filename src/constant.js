@@ -53,14 +53,24 @@ let projectsItems = [
     desc: "🔴 A Real-Time Collaborative Code Editor | Next.js,  Zustand, Socket.io, Node.js, ShadCN🚀\n 💻 This powerful editor allows multiple users to code together seamlessly in real time.",
     link: "https://www.linkedin.com/posts/himanshu-kumar-gola_nextjs-socketio-nodejs-activity-7244314940021342209-NETe?utm_source=share&utm_medium=member_desktop",
   },
+{
+  id: 7,
+  title: "RolexDB",
+  img: "/projects/blog.png",
+  video: "https://youtu.be/jcoj-J5nRkM",
+  stack: ["Node.js", "TCP", "RESP", "LRU Cache", "JavaScript"],
+  desc: "🧠 RolexDB is a lightweight Redis-like in-memory database built from scratch using Node.js and raw TCP sockets.\n⚙️ Supports RESP protocol, commands like GET/SET/MGET, expiration, and LRU caching using Map + Doubly Linked List.\n🔥 Built to understand how databases and caching layers like Redis work under the hood!",
+  link: "https://www.linkedin.com/posts/himanshu-kumar-gola_redis-database-lrucache-activity-7299075669504757761-xVNj?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADH9jxUBPac3GsvOryWPOMqrT5-JftrGcC8",
+},
+
   {
-    id: 7,
+    id: 8,
     title: "Convocraft: Real-Time Chat App",
     img: "/projects/blog.png",
     video: "https://youtu.be/vY33_epj5UY",
     stack: ["NextJs", "ExpressJs", "MongoDB", "Pusher", "NextUI"],
     desc: "💬 A Real-Time Chat Application | Next.js, Express, MongoDB, Pusher ⚡\n 📡 Convocraft enables seamless communication across chat rooms with instant message delivery and a dynamic user experience.",
-    link: "https://www.linkedin.com/posts/himanshu-kumar-gola_convocraft-nextjs-mongodb-express-activity-XXXX",
+    link: "https://convo-craft-ten.vercel.app/",
   },
 ];
 

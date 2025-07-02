@@ -56,6 +56,7 @@ const Single = ({ item, pos }) => {
               width="100%"
               height={isMobile ? 160 : 370}
               playing={isPlaying}
+
               onPlay={() => setIsPlaying(true)}
               onPause={() => setIsPlaying(false)}
               controls={true}
