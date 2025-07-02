@@ -1,53 +1,70 @@
 import { useEffect, useRef, useState } from "react";
 import "./portfolio.scss";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  useInView,
+} from "framer-motion";
 import SlidingAnimation from "../Sub/SlidingAnimation";
-import { projectsItems } from "../../constant";
+import { projectsItems as items } from "../../constant";
 import ReactPlayer from "react-player/youtube";
 
-const item = projectsItems.reverse();
+const Single = ({ item, pos }) => {
 
-const Single = ({ item }) => {
+
   const ref = useRef();
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-  });
-
+  const playerRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+
+  const isInView = useInView(ref, { margin: "-20% 0px -20% 0px", once: false });
+
+  useEffect(() => {
+    if (!isInView) {
+      setIsPlaying(false); // Pause when not in view
+    }
+  }, [isInView]);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-
     handleResize();
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const { scrollYProgress } = useScroll({ target: ref });
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
   return (
     <section>
       <div className="container">
         <div className="wrapper">
-          <div className="imageContainer" ref={ref}>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+            className="imageContainer"
+            ref={ref}
+          >
             <ReactPlayer
+              ref={playerRef}
               url={item.video}
-              width={"100%"}
-              playing={true}
+              width="100%"
+              height={isMobile ? 160 : 370}
+              playing={isPlaying}
+              onPlay={() => setIsPlaying(true)}
+              onPause={() => setIsPlaying(false)}
               controls={true}
               loop={true}
-              light = {true}
-
-              height={isMobile ? "auto" : 400}
-              style={{ borderRadius: "20px" }}
+              style={{ borderRadius: "20px", overflow: "hidden" }}
             />
-          </div>
-          <motion.div className="textContainer" style={{ y }}>
-            <h2>{item.title}</h2>
+          </motion.div>
+          <motion.div className="textContainer" style={{ }}>
+            <h2>{pos}. {item.title}</h2>
             <ul className="stack">
               {item?.stack.map((st, i) => (
                 <li className="stack-item" key={i}>
@@ -67,6 +84,7 @@ const Single = ({ item }) => {
   );
 };
 
+
 const Portfolio = () => {
   const ref = useRef();
 
@@ -84,12 +102,12 @@ const Portfolio = () => {
     <div className="portfolio" ref={ref}>
       <div className="progress">
         <h1 className=" z-10 text-3xl lg:text-[72px] lg:leading-[88px] lg:mb-10 text-center text-orange-400 font-bold mt-[3rem]">
-          Successful {"{" + (item.length - 2) + "+}"} Projects I'm Proud Of
+          Crafted {"{" + (items.length - 2) + "+}"} Amazing Projects
         </h1>
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
-      {item.map((item) => (
-        <Single item={item} key={item.id} />
+      {items.map((item, ind) => (
+        <Single item={item} key={item.id} pos={ind + 1} />
       ))}
     </div>
   );

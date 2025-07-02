@@ -1,14 +1,11 @@
 import { motion } from "framer-motion";
 import { saveAs } from "file-saver";
 import { navItems } from "../../constant";
-import { linkItemVariants , linkVariants } from "../variants";
+import { linkItemVariants, linkVariants } from "../variants";
 const downloadResume = () => {
   const resumePath = "/resume/resume.pdf";
   saveAs(resumePath, "Himanshu_Kumar_Gola.pdf");
 };
-
-
-
 
 const Links = ({ setOpen }) => {
   return (
@@ -34,7 +31,10 @@ const Links = ({ setOpen }) => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         className="text-[40px] text-black"
-        onClick={downloadResume}
+        onClick={() => {
+          downloadResume();
+          setOpen((prev) => !prev);
+        }}
       >
         Resume
       </motion.button>

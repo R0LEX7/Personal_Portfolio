@@ -23,7 +23,7 @@ const Hero = () => {
             variants={textVariant}
             className="text-xl  text-center lg:text-start lg:text-4xl"
           >
-            MERN Developer & Software Engineer
+             Software Engineer & Developer
           </motion.h1>
           <motion.p
             variants={textVariant}
@@ -49,7 +49,7 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
-      <SlidingAnimation title={"MERN Developer & Software Engineer"} />
+      <SlidingAnimation title={"Software Engineer & Developer"} />
       <motion.div
         variants={picVariant}
         initial="initial"
@@ -57,7 +57,7 @@ const Hero = () => {
         className="lg:h-full absolute top-[-40px] flex-col justify-center right-0 lg:right-8 flex items-center w-full lg:w-auto"
       >
         <motion.img
-          className="w-[300px] md:w-[400px] lg:w-[450px] h-[300px] md:h-[400px] lg:h-[450px] rounded-full p-10 cursor-pointer"
+          className="w-[17rem] md:w-[400px] lg:w-[450px] h-[17rem] md:h-[400px] lg:h-[450px] rounded-full p-10 cursor-pointer"
           src="/IMG20240727143014.jpg"
           style={{objectFit : "cover"}}
           alt="Himanshu"
