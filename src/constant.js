@@ -65,7 +65,7 @@ let projectsItems = [
 
   {
     id: 8,
-    title: "Convocraft: Real-Time Chat App",
+    title: "Convocraft",
     img: "/projects/blog.png",
     video: "https://youtu.be/vY33_epj5UY",
     stack: ["NextJs", "ExpressJs", "MongoDB", "Pusher", "NextUI"],
