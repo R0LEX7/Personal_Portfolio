@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const ToggleButton = ({ setOpen }) => {
   return (
-    <button className=" z-[999] fixed w-[50px] h-[50px] rounded-full top-[25px] left-[40px]   border-transparent border-none cursor-pointer" onClick={() => setOpen((prev) => !prev)}>
+    <button className=" z-[999] fixed w-[50px] bg h-[50px] rounded-full top-[25px] left-[40px]   border-transparent border-none cursor-pointer" onClick={() => setOpen((prev) => !prev)}>
       <svg width="23" height="23" viewBox="0 0 23 23">
         <motion.path
           strokeWidth="3"
