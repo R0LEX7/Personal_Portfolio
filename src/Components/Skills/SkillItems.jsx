@@ -12,12 +12,12 @@ const SkillItems = ({ icon, index , name }) => {
     visible: { opacity: 1 },
   };
 
-  const animationDelay = 0.1;
+  const animationDelay = 0.07;
 
   return (
-    <div className="flex flex-col items-center hover:text-orange-400  hover:scale-[1.1] delay-100 ease-in-out mb-2">
+    <motion.div className="flex flex-col items-center hover:text-orange-400  hover:scale-[1.1] delay-80 ease-in mb-2">
     <motion.div
-      className="w-28 h-28 p-6 border rounded-full border-[#663399]  hover:border-orange-400 flex items-center justify-center columns-4"
+      className="w-24 h-24 lg:w-24 lg:h-24 p-6 border rounded-full border-[#663399]  hover:border-orange-400 flex items-center justify-center columns-4"
       ref={ref}
 
       initial="hidden"
@@ -27,13 +27,13 @@ const SkillItems = ({ icon, index , name }) => {
       transition={{ delay: index * animationDelay }}
       >
       {icon && (
-        <div className="text-7xl font-bold   ">
+        <div className="text-6xl p-2 font-bold   ">
           {icon}
         </div>
       )}
     </motion.div>
       <p className="text-sm font-medium" >{name}</p>
-      </div>
+      </motion.div>
   );
 };
 

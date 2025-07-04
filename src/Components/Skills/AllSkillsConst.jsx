@@ -7,28 +7,30 @@ import { FaReact, FaNodeJs, FaCodeBranch } from "react-icons/fa6";
 import { TbBrandCpp } from "react-icons/tb";
 import { DiMongodb } from "react-icons/di";
 import { IoLogoFirebase } from "react-icons/io5";
-import { SiNextdotjs } from "react-icons/si";
+import { SiNextdotjs ,SiPostgresql , SiTypescript } from "react-icons/si";
 
 
 export const mySkills = [
   { skill_name: "Html 5", icon: <FaHtml5 />, width: 80, height: 80 },
   { skill_name: "Css", icon: <IoLogoCss3 />, width: 80, height: 80 },
   { skill_name: "Javascript", icon: <IoLogoJavascript />, width: 65, height: 65 },
-  { skill_name: "Tailwind Css", icon: <SiTailwindcss />, width: 80, height: 80 },
+  { skill_name: "Typescript", icon: <SiTypescript />, width: 45, height: 45 },
+  { skill_name: "C++", icon: <TbBrandCpp />, width: 55, height: 55 },
   { skill_name: "React", icon: <FaReact />, width: 80, height: 80 },
   { skill_name: "Redux", icon: <SiRedux />, width: 80, height: 80 },
-  { skill_name: "Next.js", icon: <SiNextdotjs/>, width: 80, height: 80 },
-  { skill_name: "Zod", icon: <SiZod />, width: 55, height: 55 },
 
-
-  { skill_name: "C++", icon: <TbBrandCpp />, width: 55, height: 55 },
   { skill_name: "Node js", icon: <FaNodeJs />, width: 80, height: 80 },
   { skill_name: "Express js", icon: <SiExpress />, width: 80, height: 80 },
   { skill_name: "Mongo db", icon: <DiMongodb />, width: 55, height: 55 },
-  { skill_name: "Firebase", icon: <IoLogoFirebase />, width: 55, height: 55 },
-  { skill_name: "Appwrite", icon: <SiAppwrite />, width: 55, height: 55 },
-  { skill_name: "Github", icon: <FaCodeBranch />, width: 55, height: 55 },
-  { skill_name: "VS Code", icon: <SiVisualstudiocode />, width: 55, height: 55 },
+  { skill_name: "Tailwind Css", icon: <SiTailwindcss />, width: 80, height: 80 },
+  { skill_name: "Next.js", icon: <SiNextdotjs/>, width: 80, height: 80 },
+  { skill_name: "Zod", icon: <SiZod />, width: 55, height: 55 },
+
+  // { skill_name: "Postgresql ", icon: <SiPostgresql  />, width: 55, height: 55 },
+  // { skill_name: "Firebase", icon: <IoLogoFirebase />, width: 55, height: 55 },
+  // { skill_name: "Appwrite", icon: <SiAppwrite />, width: 55, height: 55 },
+  // { skill_name: "Github", icon: <FaCodeBranch />, width: 55, height: 55 },
+  // { skill_name: "VS Code", icon: <SiVisualstudiocode />, width: 55, height: 55 },
 ];
 
 export const Frontend_skill = [

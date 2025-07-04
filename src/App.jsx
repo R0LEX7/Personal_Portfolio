@@ -1,4 +1,5 @@
 import "./App.scss";
+import ResumeComp from "./Components/Resume/ResumeComp.jsx";
 
 import {
   Navbar,
@@ -10,10 +11,13 @@ import {
   Portfolio,
   Cursor,
 } from "./index.js";
+import { Worker } from '@react-pdf-viewer/core';
+
 
 function App() {
   return (
     <>
+
       <Cursor />
       <Navbar />
       <section id="home">
@@ -27,13 +31,15 @@ function App() {
       </section>
       <section id="skills" className="h-auto lg:h-screen vertical">
         <Skills />
-        
+
       </section>
       <section id="projects">
         <Parallax type={"projects"} />
       </section>
 
+
       <Portfolio />
+      {/* <section id="resume"><ResumeComp/></section> */}
       <section id="contact">
         <Contact />
       </section>
